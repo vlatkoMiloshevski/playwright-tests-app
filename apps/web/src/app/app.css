@@ -1,0 +1,18 @@
+:host {
+    display: block;
+    min-height: 100vh;
+    background: #f8fafc;
+    color: #111827;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.topbar {
+    background: #0f172a;
+    padding: 0.875rem 1rem;
+}
+
+.topbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}

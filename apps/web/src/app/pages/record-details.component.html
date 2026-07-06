@@ -1,0 +1,20 @@
+<section class="page">
+    @if (record$ | async; as record) {
+    <article data-testid="record-details" class="card">
+        <h1>Record details</h1>
+        <p>
+            ID: <strong data-testid="record-id">{{ record.id }}</strong>
+        </p>
+        <p>Name: {{ record.name }}</p>
+        <p>Type: {{ record.type }}</p>
+        <p>Status: {{ record.status }}</p>
+        <a routerLink="/">Back to records</a>
+    </article>
+    } @else {
+    <article class="card">
+        <h1>Record not found</h1>
+        <p>The requested record ID does not exist in test data.</p>
+        <a routerLink="/">Back to records</a>
+    </article>
+    }
+</section>
