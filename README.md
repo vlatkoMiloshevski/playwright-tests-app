@@ -37,6 +37,16 @@ The app shows a records table on the landing page and supports navigation to a r
 - Node.js 20+ (recommended for latest `playwright-bdd`)
 - npm
 
+## CI / GitHub Actions
+
+This repository includes a configured GitHub Actions workflow for CI that performs:
+
+- install dependencies with `npm ci`
+- lint the web app with `npx nx lint web`
+- build the web app with `npm run build:web`
+- install Playwright browsers 
+- execute the `web-e2e` tests
+
 ## Install
 
 ```bash

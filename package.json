@@ -5,6 +5,7 @@
   "scripts": {
     "start": "nx serve web",
     "start:web": "nx serve web",
+    "start:prod": "node dist/apps/web/server/main.js",
     "build:web": "nx build web",
     "lint": "nx lint web",
     "test:unit": "nx test web",
