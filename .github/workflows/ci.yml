@@ -92,3 +92,14 @@ jobs:
 
       - name: Run Playwright E2E tests
         run: npm run test:e2e
+
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    needs:
+      - unit
+      - e2e
+    steps:
+      - name: Deployment placeholder
+        run: |
+          echo "Whenever hosted on a server, this step can be used to deploy the application :)"

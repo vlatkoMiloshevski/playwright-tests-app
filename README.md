@@ -44,7 +44,8 @@ This repository includes a configured GitHub Actions workflow for CI that perfor
 - install dependencies with `npm ci`
 - lint the web app with `npx nx lint web`
 - build the web app with `npm run build:web`
-- install Playwright browsers 
+- run Jest unit tests with `npm run test:unit`
+- install Playwright browsers
 - execute the `web-e2e` tests
 
 ## Install
