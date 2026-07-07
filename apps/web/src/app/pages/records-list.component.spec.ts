@@ -37,7 +37,7 @@ describe('RecordsListComponent', () => {
   });
 
   it('should navigate to record details when opening a record', () => {
-    const navigateSpy = spyOn(router, 'navigate').and.returnValue(Promise.resolve(true));
+    const navigateSpy = jest.spyOn(router, 'navigate').mockResolvedValue(true);
 
     component.openRecord(1);
 
