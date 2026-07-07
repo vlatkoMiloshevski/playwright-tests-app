@@ -6,10 +6,10 @@
     "start": "nx serve web",
     "start:web": "nx serve web",
     "build:web": "nx build web",
+    "lint": "nx lint web",
     "test:unit": "nx test web",
     "test:e2e:ui": "nx run web-e2e:e2e-ui",
-    "test:e2e": "nx run web-e2e:e2e",
-    "ci": "npx nx lint web && npx nx build web --configuration production && npx nx run web-e2e:e2e"
+    "test:e2e": "nx run web-e2e:e2e"
   },
   "private": true,
   "dependencies": {
