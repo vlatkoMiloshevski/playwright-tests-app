@@ -10,10 +10,13 @@ export default defineConfig({
   testDir,
   fullyParallel: false,
   workers: 1,
+  outputDir: 'apps/web-e2e/.playwright-output',
   reporter: 'list',
   use: {
     baseURL: 'http://localhost:4300',
-    trace: 'on-first-retry',
+    trace: 'off',
+    screenshot: 'off',
+    video: 'off',
   },
   webServer: {
     command: 'npx nx serve web --port=4300',

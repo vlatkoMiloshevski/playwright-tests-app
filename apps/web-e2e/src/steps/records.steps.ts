@@ -1,7 +1,22 @@
 import { expect } from '@playwright/test';
 import { createBdd, test } from 'playwright-bdd';
+import { promises as fs } from 'fs';
+import { join } from 'path';
 
 const { Given, Then, When } = createBdd(test);
+
+Given('the API request to {string} is mocked with fixture {string}', async ({ page }, requestUrl: string, fixtureName: string) => {
+  const filePath = join(__dirname, '..', 'mocks', fixtureName);
+  const body = JSON.stringify(JSON.parse(await fs.readFile(filePath, 'utf-8')));
+
+  await page.route(`**${requestUrl}`, async (route) => {
+    await route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body,
+    });
+  });
+});
 
 Given('I open the records landing page', async ({ page }) => {
   await page.goto('/');

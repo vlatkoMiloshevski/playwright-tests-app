@@ -3,6 +3,9 @@ Feature: Records table and details page
   I want to open a record from the landing table
   So that I can see details for the selected ID
 
+  Background:
+    Given the API request to "/data/records.json" is mocked with fixture "records.json"
+
   Scenario: Table is displayed on landing page
     Given I open the records landing page
     Then I should see the records table
