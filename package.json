@@ -4,9 +4,8 @@
   "license": "MIT",
   "scripts": {
     "start": "nx serve web",
-    "start:web": "nx serve web",
     "start:prod": "node dist/apps/web/server/main.js",
-    "build:web": "nx build web",
+    "build": "nx build web",
     "lint": "nx lint web",
     "test:unit": "nx test web",
     "test:e2e:ui": "nx run web-e2e:e2e-ui",

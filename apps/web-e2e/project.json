@@ -7,13 +7,13 @@
         "e2e": {
             "executor": "nx:run-commands",
             "options": {
-                "command": "npx bddgen test --config apps/web-e2e/playwright.config.ts && npx playwright test --config apps/web-e2e/playwright.config.ts"
+                "command": "npx bddgen test --config apps/web-e2e/playwright.config.ts && npx playwright test --config apps/web-e2e/playwright.config.ts --output=apps/web-e2e/.playwright-output"
             }
         },
         "e2e-ui": {
             "executor": "nx:run-commands",
             "options": {
-                "command": "powershell -Command \"npx bddgen test --config apps/web-e2e/playwright.config.ts; npx playwright test --config apps/web-e2e/playwright.config.ts --ui\""
+                "command": "powershell -Command \"npx bddgen test --config apps/web-e2e/playwright.config.ts; npx playwright test --config apps/web-e2e/playwright.config.ts --ui --output=apps/web-e2e/.playwright-output\""
             }
         }
     }

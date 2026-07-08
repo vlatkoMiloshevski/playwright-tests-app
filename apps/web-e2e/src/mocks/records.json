@@ -1,0 +1,20 @@
+[
+    {
+        "id": 101,
+        "name": "Alpha",
+        "type": "Invoice",
+        "status": "Open"
+    },
+    {
+        "id": 102,
+        "name": "Beta",
+        "type": "Contract",
+        "status": "Closed"
+    },
+    {
+        "id": 103,
+        "name": "Gamma",
+        "type": "Order",
+        "status": "Pending"
+    }
+]
